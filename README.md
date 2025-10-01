@@ -1,7 +1,7 @@
 # Backend FastAPI Portal de Ofertas
 
-✨ **Proyecto:** API REST para gestionar empresas y ofertas
-**Tecnologías:** FastAPI, Python, SQLAlchemy, PostgreSQL
+✨ **Proyecto:** API REST para gestionar empresas y ofertas.
+**Tecnologías:** FastAPI, Python, SQLAlchemy, PostgreSQL.
 **Estado:** CRUD básico funcionando, listo para integrar con frontend.
 
 ---
@@ -80,9 +80,17 @@ backend-fastapi-ofertas/
 * Listar empresas con `GET /empresas/`.
 * Crear ofertas con `POST /ofertas/`.
 * Listar ofertas con `GET /ofertas/`.
+* Crear estudiantes con `POST /estudiantes/`.
+* Listar estudiantes con `GET /estudiantes/`.
+* Obtener ofertas recomendadas para un estudiante con `GET /matching/{estudiante_id}`.
 * Documentación y pruebas automáticas en Swagger.
 
 ---
+
+## Capturas
+
+VERSIÓN 1:
+![API](screenshots/Version1_API_2025-10-01.png)
 
 ## Próximos pasos
 
