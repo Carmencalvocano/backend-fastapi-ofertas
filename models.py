@@ -15,3 +15,10 @@ class Oferta(Base):
     descripcion = Column(String)
     empresa_id = Column(Integer, ForeignKey("empresas.id"))
     empresa = relationship("Empresa", back_populates="ofertas")
+
+class Estudiante(Base):
+    __tablename__ = "estudiantes"
+
+    id = Column(Integer, primary_key=True, index=True)
+    nombre = Column(String, index=True)
+    skills = Column(String)  # lista simple separada por comas, ejemplo: "python,sql,react"

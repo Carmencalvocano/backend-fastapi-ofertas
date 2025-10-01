@@ -22,3 +22,13 @@ def create_oferta(db: Session, oferta: schemas.OfertaCreate):
     db.commit()
     db.refresh(db_oferta)
     return db_oferta
+
+def create_estudiante(db: Session, estudiante: schemas.EstudianteCreate):
+    db_est = models.Estudiante(nombre=estudiante.nombre, skills=estudiante.skills)
+    db.add(db_est)
+    db.commit()
+    db.refresh(db_est)
+    return db_est
+
+def get_estudiantes(db: Session, skip: int = 0, limit: int = 10):
+    return db.query(models.Estudiante).offset(skip).limit(limit).all()
